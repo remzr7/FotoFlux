@@ -165,4 +165,55 @@ int captureCamera() {
 }
 
 
+- (IBAction)setPreview:(id)sender {
+    
+    previewCamera();
+
+}
+
+int preview()
+{
+    int fd, retval;
+    CameraFile *file;
+
+    
+    retval = gp_camera_capture_preview(camera, file, context);
+    
+    
+//    retval = gp_camera_capture(camera, GP_CAPTURE_IMAGE, &camera_file_path, context);
+
+
+    return 0;
+}
+
+int previewCamera()
+{
+    gp_camera_new (&camera);
+    context = gp_context_new();
+    // set callbacks for camera messages
+    gp_context_set_error_func(context, error_func, NULL);
+    gp_context_set_message_func(context, message_func, NULL);
+    
+    //This call will autodetect cameras, take the first one from the list and use it
+    printf("Camera init. Can take more than 10 seconds depending on the "
+           "memory card's contents (remove card from camera to speed up).\n");
+    int ret = gp_camera_init(camera, context);
+    if (ret < GP_OK) {
+        printf("No camera auto detected.\n");
+        gp_camera_free(camera);
+        return 1;
+    }
+    
+    preview();
+    
+    gp_camera_unref(camera);
+    gp_context_unref(context);
+    
+    return 0;
+
+    
+    
+}
+
+
 @end

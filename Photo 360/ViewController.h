@@ -20,6 +20,7 @@
 
 - (IBAction)Connect:(NSButton *)sender;
 
+- (IBAction)setPreview:(id)sender;
 
 @end
 

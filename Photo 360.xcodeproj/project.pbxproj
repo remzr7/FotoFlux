@@ -18,6 +18,7 @@
 		2D03EA5D1A73EE6B00AF6BCD /* Line2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D03EA5C1A73EE6B00AF6BCD /* Line2.png */; };
 		2D03EA611A73F09800AF6BCD /* RZLevelIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D03EA601A73F09800AF6BCD /* RZLevelIndicator.m */; };
 		2D03EA661A73F9E600AF6BCD /* Gphoto2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D03EA651A73F9E600AF6BCD /* Gphoto2.framework */; };
+		2D82CB631A7416AD000829B8 /* Gphoto2.framework in Resources */ = {isa = PBXBuildFile; fileRef = 2D03EA651A73F9E600AF6BCD /* Gphoto2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D82CB631A7416AD000829B8 /* Gphoto2.framework in Resources */,
 				2D03EA5B1A73EDDA00AF6BCD /* Load.png in Resources */,
 				2D03EA3D1A73D84600AF6BCD /* Images.xcassets in Resources */,
 				2D03EA401A73D84600AF6BCD /* Main.storyboard in Resources */,
@@ -456,6 +458,7 @@
 				2D03EA511A73D84600AF6BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D03EA521A73D84600AF6BCD /* Build configuration list for PBXNativeTarget "Photo 360Tests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +467,7 @@
 				2D03EA541A73D84600AF6BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
