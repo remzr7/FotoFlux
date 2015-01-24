@@ -14,6 +14,8 @@
 		2D03EA3D1A73D84600AF6BCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D03EA3C1A73D84600AF6BCD /* Images.xcassets */; };
 		2D03EA401A73D84600AF6BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D03EA3E1A73D84600AF6BCD /* Main.storyboard */; };
 		2D03EA4C1A73D84600AF6BCD /* Photo_360Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D03EA4B1A73D84600AF6BCD /* Photo_360Tests.m */; };
+		2D03EA571A73DED600AF6BCD /* NSColor + RZPaperColor.h in Resources */ = {isa = PBXBuildFile; fileRef = 2D03EA561A73DED600AF6BCD /* NSColor + RZPaperColor.h */; };
+		2D03EA591A73DF0400AF6BCD /* NSColor + RZPaperColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D03EA581A73DF0400AF6BCD /* NSColor + RZPaperColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		2D03EA451A73D84600AF6BCD /* Photo 360Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo 360Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D03EA4A1A73D84600AF6BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D03EA4B1A73D84600AF6BCD /* Photo_360Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo_360Tests.m; sourceTree = "<group>"; };
+		2D03EA561A73DED600AF6BCD /* NSColor + RZPaperColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor + RZPaperColor.h"; sourceTree = "<group>"; };
+		2D03EA581A73DF0400AF6BCD /* NSColor + RZPaperColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor + RZPaperColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			children = (
 				2D03EA311A73D84600AF6BCD /* AppDelegate.h */,
 				2D03EA321A73D84600AF6BCD /* AppDelegate.m */,
+				2D03EA551A73DE2700AF6BCD /* RZPaperColors */,
 				2D03EA361A73D84600AF6BCD /* ViewController.h */,
 				2D03EA371A73D84600AF6BCD /* ViewController.m */,
 				2D03EA3C1A73D84600AF6BCD /* Images.xcassets */,
@@ -117,6 +122,15 @@
 				2D03EA4A1A73D84600AF6BCD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D03EA551A73DE2700AF6BCD /* RZPaperColors */ = {
+			isa = PBXGroup;
+			children = (
+				2D03EA561A73DED600AF6BCD /* NSColor + RZPaperColor.h */,
+				2D03EA581A73DF0400AF6BCD /* NSColor + RZPaperColor.m */,
+			);
+			name = RZPaperColors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +215,7 @@
 			files = (
 				2D03EA3D1A73D84600AF6BCD /* Images.xcassets in Resources */,
 				2D03EA401A73D84600AF6BCD /* Main.storyboard in Resources */,
+				2D03EA571A73DED600AF6BCD /* NSColor + RZPaperColor.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +235,7 @@
 			files = (
 				2D03EA3B1A73D84600AF6BCD /* Photo_360.xcdatamodeld in Sources */,
 				2D03EA381A73D84600AF6BCD /* ViewController.m in Sources */,
+				2D03EA591A73DF0400AF6BCD /* NSColor + RZPaperColor.m in Sources */,
 				2D03EA351A73D84600AF6BCD /* main.m in Sources */,
 				2D03EA331A73D84600AF6BCD /* AppDelegate.m in Sources */,
 			);
