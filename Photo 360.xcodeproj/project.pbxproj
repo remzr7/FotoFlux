@@ -17,8 +17,8 @@
 		2D03EA5B1A73EDDA00AF6BCD /* Load.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D03EA5A1A73EDDA00AF6BCD /* Load.png */; };
 		2D03EA5D1A73EE6B00AF6BCD /* Line2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D03EA5C1A73EE6B00AF6BCD /* Line2.png */; };
 		2D03EA611A73F09800AF6BCD /* RZLevelIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D03EA601A73F09800AF6BCD /* RZLevelIndicator.m */; };
-		2D03EA661A73F9E600AF6BCD /* Gphoto2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D03EA651A73F9E600AF6BCD /* Gphoto2.framework */; };
-		2D82CB631A7416AD000829B8 /* Gphoto2.framework in Resources */ = {isa = PBXBuildFile; fileRef = 2D03EA651A73F9E600AF6BCD /* Gphoto2.framework */; };
+		2D82CB651A7419A7000829B8 /* Gphoto2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D82CB641A7419A7000829B8 /* Gphoto2.framework */; };
+		2D82CB661A7419BF000829B8 /* Gphoto2.framework in Resources */ = {isa = PBXBuildFile; fileRef = 2D82CB641A7419A7000829B8 /* Gphoto2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 		2D03EA5C1A73EE6B00AF6BCD /* Line2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Line2.png; sourceTree = "<group>"; };
 		2D03EA5F1A73F09800AF6BCD /* RZLevelIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZLevelIndicator.h; sourceTree = "<group>"; };
 		2D03EA601A73F09800AF6BCD /* RZLevelIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZLevelIndicator.m; sourceTree = "<group>"; };
-		2D03EA651A73F9E600AF6BCD /* Gphoto2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gphoto2.framework; path = Frameworks/Gphoto2.framework; sourceTree = "<group>"; };
+		2D82CB641A7419A7000829B8 /* Gphoto2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gphoto2.framework; path = Frameworks/Gphoto2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D03EA661A73F9E600AF6BCD /* Gphoto2.framework in Frameworks */,
+				2D82CB651A7419A7000829B8 /* Gphoto2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 		2D03EA2F1A73D84600AF6BCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2D03EA651A73F9E600AF6BCD /* Gphoto2.framework */,
+				2D82CB641A7419A7000829B8 /* Gphoto2.framework */,
 				2D03EA301A73D84600AF6BCD /* Info.plist */,
 				2D03EA341A73D84600AF6BCD /* main.m */,
 			);
@@ -231,7 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D82CB631A7416AD000829B8 /* Gphoto2.framework in Resources */,
+				2D82CB661A7419BF000829B8 /* Gphoto2.framework in Resources */,
 				2D03EA5B1A73EDDA00AF6BCD /* Load.png in Resources */,
 				2D03EA3D1A73D84600AF6BCD /* Images.xcassets in Resources */,
 				2D03EA401A73D84600AF6BCD /* Main.storyboard in Resources */,
@@ -378,6 +378,8 @@
 					360,
 					"$(PROJECT_DIR)/Photo",
 					360/Frameworks,
+					"$(PROJECT_DIR)/Photo",
+					360/Frameworks,
 				);
 				INFOPLIST_FILE = "Photo 360/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks.";
@@ -394,6 +396,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Photo",
 					360,
+					"$(PROJECT_DIR)/Photo",
+					360/Frameworks,
 					"$(PROJECT_DIR)/Photo",
 					360/Frameworks,
 				);
