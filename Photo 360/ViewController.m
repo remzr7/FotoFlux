@@ -15,27 +15,8 @@ GPContext  * context;
 
 
 
+
 @implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-
-    
-}
-
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
-}
-
-- (void)drawRect:(NSRect)dirtyRect {
-    // Fill in background Color
-    CGContextRef context = (CGContextRef) [[NSGraphicsContext currentContext] graphicsPort];
-    CGContextSetRGBFillColor(context, 1,1,1,1);
-    CGContextFillRect(context, NSRectToCGRect(dirtyRect));
-}
 
 void error_func (GPContext *context, const char *format, va_list args, void *data) {
     fprintf(stderr, "*** Contexterror ***\n");
@@ -48,9 +29,29 @@ void message_func (GPContext *context, const char *format, va_list args, void *d
     printf ("\n");
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    dispatch_queue_t myQueue  = dispatch_queue_create("My Queue", NULL);
+    dispatch_async(myQueue, ^{
+       
+        gp_camera_new (&camera);
+        context = gp_context_new();
+        gp_context_set_error_func(context, error_func, NULL);
+        gp_context_set_message_func(context, message_func, NULL);
+        
+        printf("Camera init. Can take more than 10 seconds depending on the "
+               "memory card's contents (remove card from camera to speed up).\n");
+        
+        int ret = gp_camera_init(camera, context);
+    });
+    
+    NSLog(@"Camerca Ready"); 
+}
+
+
 - (IBAction)Connect:(NSButton *)sender {
     captureCamera();
-    
 }
 
 int capture (const char *filename) {
@@ -100,7 +101,7 @@ int capture (const char *filename) {
     }
     
     // free CameraFile object
-    gp_file_free(file);
+//    gp_file_free(file);
     
     // Code from here waits for camera to complete everything.
     // Trying to take two successive captures without waiting
@@ -128,22 +129,30 @@ int capture (const char *filename) {
 
 
 int captureCamera() {
-    gp_camera_new (&camera);
-    context = gp_context_new();
-    
-    // set callbacks for camera messages
-    gp_context_set_error_func(context, error_func, NULL);
-    gp_context_set_message_func(context, message_func, NULL);
-    
-    //This call will autodetect cameras, take the first one from the list and use it
-    printf("Camera init. Can take more than 10 seconds depending on the "
-           "memory card's contents (remove card from camera to speed up).\n");
-    int ret = gp_camera_init(camera, context);
-    if (ret < GP_OK) {
-        printf("No camera auto detected.\n");
-        gp_camera_free(camera);
-        return 1;
-    }
+//    gp_camera_new (&camera);
+//    printf("1 done");
+//    context = gp_context_new();
+//    printf("2 done");
+//
+//    // set callbacks for camera messages
+//    gp_context_set_error_func(context, error_func, NULL);
+//    printf("3 done");
+//
+//    gp_context_set_message_func(context, message_func, NULL);
+//    printf("4 done");
+//
+//    
+//    //This call will autodetect cameras, take the first one from the list and use it
+//    printf("Camera init. Can take more than 10 seconds depending on the "
+//           "memory card's contents (remove card from camera to speed up).\n");
+//    int ret = gp_camera_init(camera, context);
+//    printf("5 done");
+//
+//    if (ret < GP_OK) {
+//        printf("No camera auto detected.\n");
+//        gp_camera_free(camera);
+//        return 1;
+//    }
     
     // take 10 shots
     char filename[256];
@@ -152,14 +161,22 @@ int captureCamera() {
     
     // do some capturing
     for (i = 0; i < nShots; i++) {
+        printf("6 done");
+
         snprintf(filename, 256, "shot-%04d.nef", i);
         printf("Capturing to file %s\n", filename);
         capture(filename);
     }
     
+    printf("7 done");
+
     // close camera
-    gp_camera_unref(camera);
-    gp_context_unref(context);
+//    gp_camera_unref(camera);
+//    printf("8 done");
+//
+//    gp_context_unref(context);
+//    printf("9 done");
+
     
     return 0;
 }
