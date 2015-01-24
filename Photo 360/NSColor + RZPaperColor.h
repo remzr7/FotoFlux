@@ -28,14 +28,14 @@
 
 
 /**
- *  Returns a UIColor from a given hex-code.
+ *  Returns a NSColor from a given hex-code.
  *
- *  @param rgbValue The hex-code to use to get a UIColor. ex: 0xffffff
+ *  @param rgbValue The hex-code to use to get a NSColor. ex: 0xffffff
  *
- *  @return A UIColor object of the color of the passed in hex-code.
+ *  @return A NSColor object of the color of the passed in hex-code.
  */
-#define UIColorFromRGB(rgbValue) \
-[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+#define NSColorFromRGB(rgbValue) \
+[NSColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 \
 alpha:1.0]
@@ -48,7 +48,7 @@ alpha:1.0]
 /**
  *  Returns a BOOL indicating whether or not the color passed to this function is clear or not.
  *
- *  @param color The UIColor to test.
+ *  @param color The NSColor to test.
  *
  *  @return YES if clear, NO if not clear.
  */
@@ -62,352 +62,352 @@ alpha:1.0]
  *
  *  @return A UIImage of the passed color.
  */
-+ (UIImage *)imageFromColor:(UIColor *)color;
++ (NSImage *)imageFromColor:(NSColor *)color;
 
 
 /**
  *  DEPRECATED! Please use 'hexStringFromRGBColor:' instead.
- *  Returns the hex-code representation of a UIColor.
+ *  Returns the hex-code representation of a NSColor.
  *
  *  @param color The color to inspect for its hex-code.
  *
  *  @return An NSString representing the hex-code of the passed in color.
  */
-+ (NSString *)colorToHex:(UIColor *)color __attribute__((deprecated("Please use \'hexStringFromRGBColor:\' instead.")));
++ (NSString *)colorToHex:(NSColor *)color __attribute__((deprecated("Please use \'hexStringFromRGBColor:\' instead.")));
 
 
 /**
- *  Returns the hex-code representation of a UIColor.
+ *  Returns the hex-code representation of a NSColor.
  *
  *  @param color The color to inspect for its hex-code.
  *
  *  @return An NSString representing the hex-code of the passed in color.
  */
-+ (NSString *)hexStringFromRGBColor:(UIColor *)color;
++ (NSString *)hexStringFromRGBColor:(NSColor *)color;
 
 
 /**
  *  Returns a simple gradient layer built from two colors.
  *
- *  @param startColor A UIColor to use as the start color of the gradient layer.
- *  @param endColor   A UIColor to use as the end color of the gradient layer.
+ *  @param startColor A NSColor to use as the start color of the gradient layer.
+ *  @param endColor   A NSColor to use as the end color of the gradient layer.
  *
  *  @return A CAGradientLayer starting with the startColor and ending with the endColor.
  */
-+ (CAGradientLayer *)gradientWithStartColor:(UIColor *)startColor
-                                   endColor:(UIColor *)endColor;
++ (NSGradient *)gradientWithStartColor:(NSColor *)startColor
+                                   endColor:(NSColor *)endColor;
 
 
 #pragma mark - Red
-+ (UIColor *)paperColorRed50;
-+ (UIColor *)paperColorRed100;
-+ (UIColor *)paperColorRed200;
-+ (UIColor *)paperColorRed300;
-+ (UIColor *)paperColorRed400;
-+ (UIColor *)paperColorRed500;
-+ (UIColor *)paperColorRed600;
-+ (UIColor *)paperColorRed700;
-+ (UIColor *)paperColorRed800;
-+ (UIColor *)paperColorRed900;
-+ (UIColor *)paperColorRedA100;
-+ (UIColor *)paperColorRedA200;
-+ (UIColor *)paperColorRedA400;
-+ (UIColor *)paperColorRedA700;
-+ (UIColor *)paperColorRed;
++ (NSColor *)paperColorRed50;
++ (NSColor *)paperColorRed100;
++ (NSColor *)paperColorRed200;
++ (NSColor *)paperColorRed300;
++ (NSColor *)paperColorRed400;
++ (NSColor *)paperColorRed500;
++ (NSColor *)paperColorRed600;
++ (NSColor *)paperColorRed700;
++ (NSColor *)paperColorRed800;
++ (NSColor *)paperColorRed900;
++ (NSColor *)paperColorRedA100;
++ (NSColor *)paperColorRedA200;
++ (NSColor *)paperColorRedA400;
++ (NSColor *)paperColorRedA700;
++ (NSColor *)paperColorRed;
 
 #pragma mark - Pink
-+ (UIColor *)paperColorPink50;
-+ (UIColor *)paperColorPink100;
-+ (UIColor *)paperColorPink200;
-+ (UIColor *)paperColorPink300;
-+ (UIColor *)paperColorPink400;
-+ (UIColor *)paperColorPink500;
-+ (UIColor *)paperColorPink600;
-+ (UIColor *)paperColorPink700;
-+ (UIColor *)paperColorPink800;
-+ (UIColor *)paperColorPink900;
-+ (UIColor *)paperColorPinkA100;
-+ (UIColor *)paperColorPinkA200;
-+ (UIColor *)paperColorPinkA400;
-+ (UIColor *)paperColorPinkA700;
-+ (UIColor *)paperColorPink;
++ (NSColor *)paperColorPink50;
++ (NSColor *)paperColorPink100;
++ (NSColor *)paperColorPink200;
++ (NSColor *)paperColorPink300;
++ (NSColor *)paperColorPink400;
++ (NSColor *)paperColorPink500;
++ (NSColor *)paperColorPink600;
++ (NSColor *)paperColorPink700;
++ (NSColor *)paperColorPink800;
++ (NSColor *)paperColorPink900;
++ (NSColor *)paperColorPinkA100;
++ (NSColor *)paperColorPinkA200;
++ (NSColor *)paperColorPinkA400;
++ (NSColor *)paperColorPinkA700;
++ (NSColor *)paperColorPink;
 
 #pragma mark - Purple
-+ (UIColor *)paperColorPurple50;
-+ (UIColor *)paperColorPurple100;
-+ (UIColor *)paperColorPurple200;
-+ (UIColor *)paperColorPurple300;
-+ (UIColor *)paperColorPurple400;
-+ (UIColor *)paperColorPurple500;
-+ (UIColor *)paperColorPurple600;
-+ (UIColor *)paperColorPurple700;
-+ (UIColor *)paperColorPurple800;
-+ (UIColor *)paperColorPurple900;
-+ (UIColor *)paperColorPurpleA100;
-+ (UIColor *)paperColorPurpleA200;
-+ (UIColor *)paperColorPurpleA400;
-+ (UIColor *)paperColorPurpleA700;
-+ (UIColor *)paperColorPurple;
++ (NSColor *)paperColorPurple50;
++ (NSColor *)paperColorPurple100;
++ (NSColor *)paperColorPurple200;
++ (NSColor *)paperColorPurple300;
++ (NSColor *)paperColorPurple400;
++ (NSColor *)paperColorPurple500;
++ (NSColor *)paperColorPurple600;
++ (NSColor *)paperColorPurple700;
++ (NSColor *)paperColorPurple800;
++ (NSColor *)paperColorPurple900;
++ (NSColor *)paperColorPurpleA100;
++ (NSColor *)paperColorPurpleA200;
++ (NSColor *)paperColorPurpleA400;
++ (NSColor *)paperColorPurpleA700;
++ (NSColor *)paperColorPurple;
 
 #pragma mark - Deep Purple
-+ (UIColor *)paperColorDeepPurple50;
-+ (UIColor *)paperColorDeepPurple100;
-+ (UIColor *)paperColorDeepPurple200;
-+ (UIColor *)paperColorDeepPurple300;
-+ (UIColor *)paperColorDeepPurple400;
-+ (UIColor *)paperColorDeepPurple500;
-+ (UIColor *)paperColorDeepPurple600;
-+ (UIColor *)paperColorDeepPurple700;
-+ (UIColor *)paperColorDeepPurple800;
-+ (UIColor *)paperColorDeepPurple900;
-+ (UIColor *)paperColorDeepPurpleA100;
-+ (UIColor *)paperColorDeepPurpleA200;
-+ (UIColor *)paperColorDeepPurpleA400;
-+ (UIColor *)paperColorDeepPurpleA700;
-+ (UIColor *)paperColorDeepPurple;
++ (NSColor *)paperColorDeepPurple50;
++ (NSColor *)paperColorDeepPurple100;
++ (NSColor *)paperColorDeepPurple200;
++ (NSColor *)paperColorDeepPurple300;
++ (NSColor *)paperColorDeepPurple400;
++ (NSColor *)paperColorDeepPurple500;
++ (NSColor *)paperColorDeepPurple600;
++ (NSColor *)paperColorDeepPurple700;
++ (NSColor *)paperColorDeepPurple800;
++ (NSColor *)paperColorDeepPurple900;
++ (NSColor *)paperColorDeepPurpleA100;
++ (NSColor *)paperColorDeepPurpleA200;
++ (NSColor *)paperColorDeepPurpleA400;
++ (NSColor *)paperColorDeepPurpleA700;
++ (NSColor *)paperColorDeepPurple;
 
 #pragma mark - Indigo
-+ (UIColor *)paperColorIndigo50;
-+ (UIColor *)paperColorIndigo100;
-+ (UIColor *)paperColorIndigo200;
-+ (UIColor *)paperColorIndigo300;
-+ (UIColor *)paperColorIndigo400;
-+ (UIColor *)paperColorIndigo500;
-+ (UIColor *)paperColorIndigo600;
-+ (UIColor *)paperColorIndigo700;
-+ (UIColor *)paperColorIndigo800;
-+ (UIColor *)paperColorIndigo900;
-+ (UIColor *)paperColorIndigoA100;
-+ (UIColor *)paperColorIndigoA200;
-+ (UIColor *)paperColorIndigoA400;
-+ (UIColor *)paperColorIndigoA700;
-+ (UIColor *)paperColorIndigo;
++ (NSColor *)paperColorIndigo50;
++ (NSColor *)paperColorIndigo100;
++ (NSColor *)paperColorIndigo200;
++ (NSColor *)paperColorIndigo300;
++ (NSColor *)paperColorIndigo400;
++ (NSColor *)paperColorIndigo500;
++ (NSColor *)paperColorIndigo600;
++ (NSColor *)paperColorIndigo700;
++ (NSColor *)paperColorIndigo800;
++ (NSColor *)paperColorIndigo900;
++ (NSColor *)paperColorIndigoA100;
++ (NSColor *)paperColorIndigoA200;
++ (NSColor *)paperColorIndigoA400;
++ (NSColor *)paperColorIndigoA700;
++ (NSColor *)paperColorIndigo;
 
 #pragma mark - Blue
-+ (UIColor *)paperColorBlue50;
-+ (UIColor *)paperColorBlue100;
-+ (UIColor *)paperColorBlue200;
-+ (UIColor *)paperColorBlue300;
-+ (UIColor *)paperColorBlue400;
-+ (UIColor *)paperColorBlue500;
-+ (UIColor *)paperColorBlue600;
-+ (UIColor *)paperColorBlue700;
-+ (UIColor *)paperColorBlue800;
-+ (UIColor *)paperColorBlue900;
-+ (UIColor *)paperColorBlueA100;
-+ (UIColor *)paperColorBlueA200;
-+ (UIColor *)paperColorBlueA400;
-+ (UIColor *)paperColorBlueA700;
-+ (UIColor *)paperColorBlue;
++ (NSColor *)paperColorBlue50;
++ (NSColor *)paperColorBlue100;
++ (NSColor *)paperColorBlue200;
++ (NSColor *)paperColorBlue300;
++ (NSColor *)paperColorBlue400;
++ (NSColor *)paperColorBlue500;
++ (NSColor *)paperColorBlue600;
++ (NSColor *)paperColorBlue700;
++ (NSColor *)paperColorBlue800;
++ (NSColor *)paperColorBlue900;
++ (NSColor *)paperColorBlueA100;
++ (NSColor *)paperColorBlueA200;
++ (NSColor *)paperColorBlueA400;
++ (NSColor *)paperColorBlueA700;
++ (NSColor *)paperColorBlue;
 
 #pragma mark - Light Blue
-+ (UIColor *)paperColorLightBlue50;
-+ (UIColor *)paperColorLightBlue100;
-+ (UIColor *)paperColorLightBlue200;
-+ (UIColor *)paperColorLightBlue300;
-+ (UIColor *)paperColorLightBlue400;
-+ (UIColor *)paperColorLightBlue500;
-+ (UIColor *)paperColorLightBlue600;
-+ (UIColor *)paperColorLightBlue700;
-+ (UIColor *)paperColorLightBlue800;
-+ (UIColor *)paperColorLightBlue900;
-+ (UIColor *)paperColorLightBlueA100;
-+ (UIColor *)paperColorLightBlueA200;
-+ (UIColor *)paperColorLightBlueA400;
-+ (UIColor *)paperColorLightBlueA700;
-+ (UIColor *)paperColorLightBlue;
++ (NSColor *)paperColorLightBlue50;
++ (NSColor *)paperColorLightBlue100;
++ (NSColor *)paperColorLightBlue200;
++ (NSColor *)paperColorLightBlue300;
++ (NSColor *)paperColorLightBlue400;
++ (NSColor *)paperColorLightBlue500;
++ (NSColor *)paperColorLightBlue600;
++ (NSColor *)paperColorLightBlue700;
++ (NSColor *)paperColorLightBlue800;
++ (NSColor *)paperColorLightBlue900;
++ (NSColor *)paperColorLightBlueA100;
++ (NSColor *)paperColorLightBlueA200;
++ (NSColor *)paperColorLightBlueA400;
++ (NSColor *)paperColorLightBlueA700;
++ (NSColor *)paperColorLightBlue;
 
 #pragma mark - Cyan
-+ (UIColor *)paperColorCyan50;
-+ (UIColor *)paperColorCyan100;
-+ (UIColor *)paperColorCyan200;
-+ (UIColor *)paperColorCyan300;
-+ (UIColor *)paperColorCyan400;
-+ (UIColor *)paperColorCyan500;
-+ (UIColor *)paperColorCyan600;
-+ (UIColor *)paperColorCyan700;
-+ (UIColor *)paperColorCyan800;
-+ (UIColor *)paperColorCyan900;
-+ (UIColor *)paperColorCyanA100;
-+ (UIColor *)paperColorCyanA200;
-+ (UIColor *)paperColorCyanA400;
-+ (UIColor *)paperColorCyanA700;
-+ (UIColor *)paperColorCyan;
++ (NSColor *)paperColorCyan50;
++ (NSColor *)paperColorCyan100;
++ (NSColor *)paperColorCyan200;
++ (NSColor *)paperColorCyan300;
++ (NSColor *)paperColorCyan400;
++ (NSColor *)paperColorCyan500;
++ (NSColor *)paperColorCyan600;
++ (NSColor *)paperColorCyan700;
++ (NSColor *)paperColorCyan800;
++ (NSColor *)paperColorCyan900;
++ (NSColor *)paperColorCyanA100;
++ (NSColor *)paperColorCyanA200;
++ (NSColor *)paperColorCyanA400;
++ (NSColor *)paperColorCyanA700;
++ (NSColor *)paperColorCyan;
 
 #pragma mark - Teal
-+ (UIColor *)paperColorTeal50;
-+ (UIColor *)paperColorTeal100;
-+ (UIColor *)paperColorTeal200;
-+ (UIColor *)paperColorTeal300;
-+ (UIColor *)paperColorTeal400;
-+ (UIColor *)paperColorTeal500;
-+ (UIColor *)paperColorTeal600;
-+ (UIColor *)paperColorTeal700;
-+ (UIColor *)paperColorTeal800;
-+ (UIColor *)paperColorTeal900;
-+ (UIColor *)paperColorTealA100;
-+ (UIColor *)paperColorTealA200;
-+ (UIColor *)paperColorTealA400;
-+ (UIColor *)paperColorTealA700;
-+ (UIColor *)paperColorTeal;
++ (NSColor *)paperColorTeal50;
++ (NSColor *)paperColorTeal100;
++ (NSColor *)paperColorTeal200;
++ (NSColor *)paperColorTeal300;
++ (NSColor *)paperColorTeal400;
++ (NSColor *)paperColorTeal500;
++ (NSColor *)paperColorTeal600;
++ (NSColor *)paperColorTeal700;
++ (NSColor *)paperColorTeal800;
++ (NSColor *)paperColorTeal900;
++ (NSColor *)paperColorTealA100;
++ (NSColor *)paperColorTealA200;
++ (NSColor *)paperColorTealA400;
++ (NSColor *)paperColorTealA700;
++ (NSColor *)paperColorTeal;
 
 #pragma mark - Green
-+ (UIColor *)paperColorGreen50;
-+ (UIColor *)paperColorGreen100;
-+ (UIColor *)paperColorGreen200;
-+ (UIColor *)paperColorGreen300;
-+ (UIColor *)paperColorGreen400;
-+ (UIColor *)paperColorGreen500;
-+ (UIColor *)paperColorGreen600;
-+ (UIColor *)paperColorGreen700;
-+ (UIColor *)paperColorGreen800;
-+ (UIColor *)paperColorGreen900;
-+ (UIColor *)paperColorGreenA100;
-+ (UIColor *)paperColorGreenA200;
-+ (UIColor *)paperColorGreenA400;
-+ (UIColor *)paperColorGreenA700;
-+ (UIColor *)paperColorGreen;
++ (NSColor *)paperColorGreen50;
++ (NSColor *)paperColorGreen100;
++ (NSColor *)paperColorGreen200;
++ (NSColor *)paperColorGreen300;
++ (NSColor *)paperColorGreen400;
++ (NSColor *)paperColorGreen500;
++ (NSColor *)paperColorGreen600;
++ (NSColor *)paperColorGreen700;
++ (NSColor *)paperColorGreen800;
++ (NSColor *)paperColorGreen900;
++ (NSColor *)paperColorGreenA100;
++ (NSColor *)paperColorGreenA200;
++ (NSColor *)paperColorGreenA400;
++ (NSColor *)paperColorGreenA700;
++ (NSColor *)paperColorGreen;
 
 #pragma mark - Light Green
-+ (UIColor *)paperColorLightGreen50;
-+ (UIColor *)paperColorLightGreen100;
-+ (UIColor *)paperColorLightGreen200;
-+ (UIColor *)paperColorLightGreen300;
-+ (UIColor *)paperColorLightGreen400;
-+ (UIColor *)paperColorLightGreen500;
-+ (UIColor *)paperColorLightGreen600;
-+ (UIColor *)paperColorLightGreen700;
-+ (UIColor *)paperColorLightGreen800;
-+ (UIColor *)paperColorLightGreen900;
-+ (UIColor *)paperColorLightGreenA100;
-+ (UIColor *)paperColorLightGreenA200;
-+ (UIColor *)paperColorLightGreenA400;
-+ (UIColor *)paperColorLightGreenA700;
-+ (UIColor *)paperColorLightGreen;
++ (NSColor *)paperColorLightGreen50;
++ (NSColor *)paperColorLightGreen100;
++ (NSColor *)paperColorLightGreen200;
++ (NSColor *)paperColorLightGreen300;
++ (NSColor *)paperColorLightGreen400;
++ (NSColor *)paperColorLightGreen500;
++ (NSColor *)paperColorLightGreen600;
++ (NSColor *)paperColorLightGreen700;
++ (NSColor *)paperColorLightGreen800;
++ (NSColor *)paperColorLightGreen900;
++ (NSColor *)paperColorLightGreenA100;
++ (NSColor *)paperColorLightGreenA200;
++ (NSColor *)paperColorLightGreenA400;
++ (NSColor *)paperColorLightGreenA700;
++ (NSColor *)paperColorLightGreen;
 
 #pragma mark - Lime
-+ (UIColor *)paperColorLime50;
-+ (UIColor *)paperColorLime100;
-+ (UIColor *)paperColorLime200;
-+ (UIColor *)paperColorLime300;
-+ (UIColor *)paperColorLime400;
-+ (UIColor *)paperColorLime500;
-+ (UIColor *)paperColorLime600;
-+ (UIColor *)paperColorLime700;
-+ (UIColor *)paperColorLime800;
-+ (UIColor *)paperColorLime900;
-+ (UIColor *)paperColorLimeA100;
-+ (UIColor *)paperColorLimeA200;
-+ (UIColor *)paperColorLimeA400;
-+ (UIColor *)paperColorLimeA700;
-+ (UIColor *)paperColorLime;
++ (NSColor *)paperColorLime50;
++ (NSColor *)paperColorLime100;
++ (NSColor *)paperColorLime200;
++ (NSColor *)paperColorLime300;
++ (NSColor *)paperColorLime400;
++ (NSColor *)paperColorLime500;
++ (NSColor *)paperColorLime600;
++ (NSColor *)paperColorLime700;
++ (NSColor *)paperColorLime800;
++ (NSColor *)paperColorLime900;
++ (NSColor *)paperColorLimeA100;
++ (NSColor *)paperColorLimeA200;
++ (NSColor *)paperColorLimeA400;
++ (NSColor *)paperColorLimeA700;
++ (NSColor *)paperColorLime;
 
 #pragma mark - Yellow
-+ (UIColor *)paperColorYellow50;
-+ (UIColor *)paperColorYellow100;
-+ (UIColor *)paperColorYellow200;
-+ (UIColor *)paperColorYellow300;
-+ (UIColor *)paperColorYellow400;
-+ (UIColor *)paperColorYellow500;
-+ (UIColor *)paperColorYellow600;
-+ (UIColor *)paperColorYellow700;
-+ (UIColor *)paperColorYellow800;
-+ (UIColor *)paperColorYellow900;
-+ (UIColor *)paperColorYellowA100;
-+ (UIColor *)paperColorYellowA200;
-+ (UIColor *)paperColorYellowA400;
-+ (UIColor *)paperColorYellowA700;
-+ (UIColor *)paperColorYellow;
++ (NSColor *)paperColorYellow50;
++ (NSColor *)paperColorYellow100;
++ (NSColor *)paperColorYellow200;
++ (NSColor *)paperColorYellow300;
++ (NSColor *)paperColorYellow400;
++ (NSColor *)paperColorYellow500;
++ (NSColor *)paperColorYellow600;
++ (NSColor *)paperColorYellow700;
++ (NSColor *)paperColorYellow800;
++ (NSColor *)paperColorYellow900;
++ (NSColor *)paperColorYellowA100;
++ (NSColor *)paperColorYellowA200;
++ (NSColor *)paperColorYellowA400;
++ (NSColor *)paperColorYellowA700;
++ (NSColor *)paperColorYellow;
 
 #pragma mark - Amber
-+ (UIColor *)paperColorAmber50;
-+ (UIColor *)paperColorAmber100;
-+ (UIColor *)paperColorAmber200;
-+ (UIColor *)paperColorAmber300;
-+ (UIColor *)paperColorAmber400;
-+ (UIColor *)paperColorAmber500;
-+ (UIColor *)paperColorAmber600;
-+ (UIColor *)paperColorAmber700;
-+ (UIColor *)paperColorAmber800;
-+ (UIColor *)paperColorAmber900;
-+ (UIColor *)paperColorAmberA100;
-+ (UIColor *)paperColorAmberA200;
-+ (UIColor *)paperColorAmberA400;
-+ (UIColor *)paperColorAmberA700;
-+ (UIColor *)paperColorAmber;
++ (NSColor *)paperColorAmber50;
++ (NSColor *)paperColorAmber100;
++ (NSColor *)paperColorAmber200;
++ (NSColor *)paperColorAmber300;
++ (NSColor *)paperColorAmber400;
++ (NSColor *)paperColorAmber500;
++ (NSColor *)paperColorAmber600;
++ (NSColor *)paperColorAmber700;
++ (NSColor *)paperColorAmber800;
++ (NSColor *)paperColorAmber900;
++ (NSColor *)paperColorAmberA100;
++ (NSColor *)paperColorAmberA200;
++ (NSColor *)paperColorAmberA400;
++ (NSColor *)paperColorAmberA700;
++ (NSColor *)paperColorAmber;
 
 #pragma mark - Orange
-+ (UIColor *)paperColorOrange50;
-+ (UIColor *)paperColorOrange100;
-+ (UIColor *)paperColorOrange200;
-+ (UIColor *)paperColorOrange300;
-+ (UIColor *)paperColorOrange400;
-+ (UIColor *)paperColorOrange500;
-+ (UIColor *)paperColorOrange600;
-+ (UIColor *)paperColorOrange700;
-+ (UIColor *)paperColorOrange800;
-+ (UIColor *)paperColorOrange900;
-+ (UIColor *)paperColorOrangeA100;
-+ (UIColor *)paperColorOrangeA200;
-+ (UIColor *)paperColorOrangeA400;
-+ (UIColor *)paperColorOrangeA700;
-+ (UIColor *)paperColorOrange;
++ (NSColor *)paperColorOrange50;
++ (NSColor *)paperColorOrange100;
++ (NSColor *)paperColorOrange200;
++ (NSColor *)paperColorOrange300;
++ (NSColor *)paperColorOrange400;
++ (NSColor *)paperColorOrange500;
++ (NSColor *)paperColorOrange600;
++ (NSColor *)paperColorOrange700;
++ (NSColor *)paperColorOrange800;
++ (NSColor *)paperColorOrange900;
++ (NSColor *)paperColorOrangeA100;
++ (NSColor *)paperColorOrangeA200;
++ (NSColor *)paperColorOrangeA400;
++ (NSColor *)paperColorOrangeA700;
++ (NSColor *)paperColorOrange;
 
 #pragma mark - Deep Orange
-+ (UIColor *)paperColorDeepOrange50;
-+ (UIColor *)paperColorDeepOrange100;
-+ (UIColor *)paperColorDeepOrange200;
-+ (UIColor *)paperColorDeepOrange300;
-+ (UIColor *)paperColorDeepOrange400;
-+ (UIColor *)paperColorDeepOrange500;
-+ (UIColor *)paperColorDeepOrange600;
-+ (UIColor *)paperColorDeepOrange700;
-+ (UIColor *)paperColorDeepOrange800;
-+ (UIColor *)paperColorDeepOrange900;
-+ (UIColor *)paperColorDeepOrangeA100;
-+ (UIColor *)paperColorDeepOrangeA200;
-+ (UIColor *)paperColorDeepOrangeA400;
-+ (UIColor *)paperColorDeepOrangeA700;
-+ (UIColor *)paperColorDeepOrange;
++ (NSColor *)paperColorDeepOrange50;
++ (NSColor *)paperColorDeepOrange100;
++ (NSColor *)paperColorDeepOrange200;
++ (NSColor *)paperColorDeepOrange300;
++ (NSColor *)paperColorDeepOrange400;
++ (NSColor *)paperColorDeepOrange500;
++ (NSColor *)paperColorDeepOrange600;
++ (NSColor *)paperColorDeepOrange700;
++ (NSColor *)paperColorDeepOrange800;
++ (NSColor *)paperColorDeepOrange900;
++ (NSColor *)paperColorDeepOrangeA100;
++ (NSColor *)paperColorDeepOrangeA200;
++ (NSColor *)paperColorDeepOrangeA400;
++ (NSColor *)paperColorDeepOrangeA700;
++ (NSColor *)paperColorDeepOrange;
 
 #pragma mark - Brown
-+ (UIColor *)paperColorBrown50;
-+ (UIColor *)paperColorBrown100;
-+ (UIColor *)paperColorBrown200;
-+ (UIColor *)paperColorBrown300;
-+ (UIColor *)paperColorBrown400;
-+ (UIColor *)paperColorBrown500;
-+ (UIColor *)paperColorBrown600;
-+ (UIColor *)paperColorBrown700;
-+ (UIColor *)paperColorBrown800;
-+ (UIColor *)paperColorBrown900;
-+ (UIColor *)paperColorBrown;
++ (NSColor *)paperColorBrown50;
++ (NSColor *)paperColorBrown100;
++ (NSColor *)paperColorBrown200;
++ (NSColor *)paperColorBrown300;
++ (NSColor *)paperColorBrown400;
++ (NSColor *)paperColorBrown500;
++ (NSColor *)paperColorBrown600;
++ (NSColor *)paperColorBrown700;
++ (NSColor *)paperColorBrown800;
++ (NSColor *)paperColorBrown900;
++ (NSColor *)paperColorBrown;
 
 #pragma mark - Gray
-+ (UIColor *)paperColorGray50;
-+ (UIColor *)paperColorGray100;
-+ (UIColor *)paperColorGray200;
-+ (UIColor *)paperColorGray300;
-+ (UIColor *)paperColorGray400;
-+ (UIColor *)paperColorGray500;
-+ (UIColor *)paperColorGray600;
-+ (UIColor *)paperColorGray700;
-+ (UIColor *)paperColorGray800;
-+ (UIColor *)paperColorGray900;
-+ (UIColor *)paperColorGray;
++ (NSColor *)paperColorGray50;
++ (NSColor *)paperColorGray100;
++ (NSColor *)paperColorGray200;
++ (NSColor *)paperColorGray300;
++ (NSColor *)paperColorGray400;
++ (NSColor *)paperColorGray500;
++ (NSColor *)paperColorGray600;
++ (NSColor *)paperColorGray700;
++ (NSColor *)paperColorGray800;
++ (NSColor *)paperColorGray900;
++ (NSColor *)paperColorGray;
 
 #pragma mark - Blue Gray
-+ (UIColor *)paperColorBlueGray50;
-+ (UIColor *)paperColorBlueGray100;
-+ (UIColor *)paperColorBlueGray200;
-+ (UIColor *)paperColorBlueGray300;
-+ (UIColor *)paperColorBlueGray400;
-+ (UIColor *)paperColorBlueGray500;
-+ (UIColor *)paperColorBlueGray600;
-+ (UIColor *)paperColorBlueGray700;
-+ (UIColor *)paperColorBlueGray800;
-+ (UIColor *)paperColorBlueGray900;
-+ (UIColor *)paperColorBlueGray;
++ (NSColor *)paperColorBlueGray50;
++ (NSColor *)paperColorBlueGray100;
++ (NSColor *)paperColorBlueGray200;
++ (NSColor *)paperColorBlueGray300;
++ (NSColor *)paperColorBlueGray400;
++ (NSColor *)paperColorBlueGray500;
++ (NSColor *)paperColorBlueGray600;
++ (NSColor *)paperColorBlueGray700;
++ (NSColor *)paperColorBlueGray800;
++ (NSColor *)paperColorBlueGray900;
++ (NSColor *)paperColorBlueGray;
 
 
 

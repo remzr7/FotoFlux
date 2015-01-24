@@ -7,8 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Gphoto2/Gphoto2.h>
 
 @interface ViewController : NSViewController
+
+@property (weak) IBOutlet NSSlider *brightnessSlider;
+
+@property (weak) IBOutlet NSTextField *brightnessSliderNumber;
+@property (weak) IBOutlet NSLevelIndicator *ProgressLevelIndicator;
+
+@property (weak) IBOutlet NSButton *CaptureButton;
+
+- (IBAction)Connect:(NSButton *)sender;
 
 
 @end

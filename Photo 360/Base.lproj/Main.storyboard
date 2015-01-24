@@ -642,7 +642,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" appearanceType="aqua" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="505" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -652,6 +652,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Connect:" target="XfG-lQ-9wD" id="tQY-yU-0Zh"/>
+                                </connections>
                             </button>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcx-lq-mTn">
                                 <rect key="frame" x="295" y="260" width="119" height="20"/>
@@ -660,14 +663,6 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wci-mg-1Zq">
                                 <rect key="frame" x="295" y="293" width="119" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Brightness Control" id="nl0-8T-Wf0">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Tg-MZ-RAt">
-                                <rect key="frame" x="424" y="262" width="73" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BNNumber" id="YOS-X9-oJ7">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -689,8 +684,30 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQB-05-IvX">
+                                <rect key="frame" x="297" y="172" width="96" height="16"/>
+                                <levelIndicatorCell key="cell" alignment="left" doubleValue="2" maxValue="2" warningValue="2" criticalValue="2" levelIndicatorStyle="continuousCapacity" id="SRc-N2-eYC"/>
+                            </levelIndicator>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKr-0j-RZt">
+                                <rect key="frame" x="418" y="262" width="32" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BSN" id="mQv-y7-BUf">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LK2-Oh-7Ru">
+                                <rect key="frame" x="335" y="20" width="48" height="48"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="hbi-du-cFT"/>
+                            </imageView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="CaptureButton" destination="ugM-ac-75k" id="qZo-oi-mno"/>
+                        <outlet property="ProgressLevelIndicator" destination="mQB-05-IvX" id="v04-kB-Ir0"/>
+                        <outlet property="brightnessSlider" destination="Pcx-lq-mTn" id="Ekl-5w-58F"/>
+                        <outlet property="brightnessSliderNumber" destination="aKr-0j-RZt" id="T2h-Zb-CS8"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
